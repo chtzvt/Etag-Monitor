@@ -20,6 +20,8 @@ class EtagMonitor(object):
         Our constructor takes two keyword arguments:
             url, which is the url we want to reads etags from.
             dbpath, which is the path to the sqlite db we use to store etags persistently.
+            **Note: You can pass :memory: as the db path if you'd like sqlite to store the 
+            database in RAM, instead. See: https://docs.python.org/2/library/sqlite3.html
 
         Just about everything else is taken care of for you, including database initialization (to
         the point where dbpath doesn't have to point to an actual file). All you really have to do
